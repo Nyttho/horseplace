@@ -8,9 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          dark: "#B78A3D",
+          light: "#B78A3D",
+        },
+        secondary: {
+          light: "#f2f2f2",
+          dark: "#8b8c8c",
+        },
       },
+    },
+    fontFamily: {
+      sans: ["var(--font-outfit)", "sans-serif"],
     },
   },
   plugins: [],
