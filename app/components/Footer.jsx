@@ -20,10 +20,10 @@ export default function Footer() {
         </ul>
       </nav>
       <hr className="border-primary-dark w-3/4 mx-auto my-10" />
-      <div className="text-primary-dark flex justify-center items-center gap-6 my-20">
+      <div className="text-primary-dark flex justify-center items-center gap-8 my-20">
+        <a href="#" target="_blank"><Instagram /></a>
         <a href="#" target="_blank"><Linkedin /></a>
         <a href="#" target="_blank"><Facebook /></a>
-        <a href="#" target="_blank"><Instagram /></a>
         
         
         
