@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import avatar from "@/public/static/images/avatar.jpeg";
 import GridCard from "./components/GridCard";
+import avatar from "@/public/static/images/avatar.jpeg";
+import horse from "@/public/static/images/illustration_horse_1.jpeg"
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
 
       {/* Section "Ils nous font confiance" */}
       <section className="py-10 ">
-        <div className="mb-8">
+        <div className="mb-10">
           <p className="text-black text-2xl font-bold text-center">
             Ils nous font confiance
           </p>
@@ -101,6 +102,11 @@ export default function Home() {
           {/* Carte 2 */}
           <GridCard title="Économies" percent={20} text={"des coûts opérationnels économisés grâce à une gestion optimisée."} />
 
+        </div>
+      </section>
+      <section>
+        <div className="relative w-full h-80 overflow-hidden">
+          <Image src={horse} fill className="object-cover object-[0%_35%]"  alt="image of a horse "/>
         </div>
       </section>
     </>

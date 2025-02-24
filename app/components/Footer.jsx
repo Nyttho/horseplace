@@ -1,11 +1,10 @@
 import logo from "@/public/logo.svg";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram } from "../UI/Icons";
-import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="mt-20">
       <nav className="w-2/3 mx-auto">
         <ul className="flex justify-around items-center  text-primary-dark font-bold">
           <li>Accueil</li>
