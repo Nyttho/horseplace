@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "700", "900"],
   variable: "--font-outfit",
 });
 

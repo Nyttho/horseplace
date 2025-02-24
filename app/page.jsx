@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import avatar from "@/public/static/images/avatar.jpeg";
+import GridCard from "./components/GridCard";
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
               />
             </div>
             <p>
-              <span className="font-bold">Vincent Bray</span>, Fondateur de
+              <span className="font-bold text-[#e5e5e5]">Vincent BRAY</span>, Fondateur de
               Horsplace
             </p>
           </div>
@@ -76,39 +77,30 @@ export default function Home() {
       </section>
 
       {/* Statistiques */}
-      <section className="p-20 bg-secondary-light">
+      <section className="p-20 bg-white">
         <div className="grid grid-rows-8 grid-cols-3 gap-5 max-w-screen-xl mx-auto">
           {/* Rectangle 1 */}
-          <div className="bg-primary-dark text-white p-5 text-5xl col-span-2 row-span-2">
-            <p>Les chiffres parlent d'eux-mêmes.</p>
-          </div>
+          <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-2 flex items-center px-10">
+      <p>
+        Les <span className="underline underline-offset-8">chiffres</span> parlent d’eux-mêmes.
+      </p>
+    </div>
 
           {/* Carte 1 */}
-          <div className="bg-white text-primary-dark px-5 row-span-4 flex flex-col justify-around">
-            <p className="text-2xl">Stress</p>
-            <p>
-              <span className="text-4xl">95%</span> des équipes constatent une
-              diminution du stress au travail grâce à Horsplace.
-            </p>
-          </div>
+          <GridCard title="Stress" percent={95} text={"des équipes constatent une diminution du stress au travail grâce à Horsplace."} />
 
-          {/* Rectangle 2 */}
-          <div className="bg-secondary-dark text-white p-8 col-span-2 row-span-6 flex flex-col justify-between">
-            <div className="bg-primary-dark w-fit p-5">Communication</div>
-            <div className="bg-primary-dark p-5 mt-5 h-full">
-              <span className="text-4xl">85%</span> des écuries équipées
-              rapportent une amélioration dans la communication interne.
-            </div>
-          </div>
+         {/* Bloc Communication (Occupe col-span-2 & row-span-6) */}
+    <div className="bg-primary-dark text-white p-10 col-span-2 row-span-6 flex flex-col justify-center">
+      <p className="uppercase font-bold text-sm">Communication</p>
+      <p className="text-8xl font-extrabold mt-4 leading-none">100%</p>
+      <p className="mt-6 text-lg leading-relaxed">
+        des écuries équipées rapportent une amélioration dans la communication interne.
+      </p>
+    </div>
 
           {/* Carte 2 */}
-          <div className="bg-white text-primary-dark px-5 row-span-4 flex flex-col justify-around">
-            <p className="text-2xl">Économies</p>
-            <p>
-              <span className="text-4xl">20%</span> des coûts opérationnels
-              économisés grâce à une gestion optimisée.
-            </p>
-          </div>
+          <GridCard title="Économies" percent={20} text={"des coûts opérationnels économisés grâce à une gestion optimisée."} />
+
         </div>
       </section>
     </>

@@ -17,6 +17,7 @@ export default {
           dark: "#8b8c8c",
         },
       },
+   
     },
     fontFamily: {
       sans: ["var(--font-outfit)", "sans-serif"],
