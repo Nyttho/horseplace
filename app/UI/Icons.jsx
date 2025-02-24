@@ -6,6 +6,7 @@ export const Linkedin = () => {
       width="40"
       height="40"
       fill="none"
+      className="hover:scale-110 transition duration-300"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
@@ -35,6 +36,7 @@ export const Facebook = () => {
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
+      className="hover:scale-110 transition duration-300"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
@@ -63,6 +65,7 @@ export const Instagram = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       stroke=""
+      className="hover:scale-110 transition duration-300"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
