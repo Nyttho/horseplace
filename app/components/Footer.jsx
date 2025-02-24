@@ -1,21 +1,22 @@
 import logo from "@/public/logo.svg";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram } from "../UI/Icons";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="mt-20">
       <nav className="w-2/3 mx-auto">
         <ul className="flex justify-around items-center  text-primary-dark font-bold">
-          <li>Accueil</li>
-          <li>Solution</li>
-          <li>Tarifs</li>
+          <Link href="/"><li>Accueil</li></Link>
+          <Link href="/solution"><li>Solution</li></Link>
+          <Link href="/tarif"><li>Tarifs</li></Link>
           <div className="w-44 h-16">
             <Image src={logo} width={176} height={64} alt="logo" />
           </div>
-          <li>À Propos</li>
-          <li>Contact</li>
-          <li>Demander un devis</li>
+          <Link href="/a-propos"><li>À Propos</li></Link>
+          <Link href="/contact"><li>Contact</li></Link>
+          <Link href="/devis"><li>Demander un devis</li></Link>
         </ul>
       </nav>
       <hr className="border-primary-dark w-3/4 mx-auto my-10" />
