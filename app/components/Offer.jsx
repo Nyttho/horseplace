@@ -13,8 +13,8 @@ export default function Offer({ offer }) {
       </div>
       <div>
         <ul className="space-y-4 text-black/50">
-          {offer.features.map(f => (
-            <li>{f}</li>
+          {offer.features.map((feature, index) => (
+            <li key={index}>{feature}</li>
           ))}
         </ul>
       </div>
