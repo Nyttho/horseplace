@@ -38,7 +38,6 @@ export default function Tarif (){
   return( 
 <>
     <section>
-      <h1>Tarif</h1>
         <div className="flex gap-14 w-3/5 mx-auto">
           {fakeOffers.map(fake => (
             <Offer key={fake.id} offer={fake}/>

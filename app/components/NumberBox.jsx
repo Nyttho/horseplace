@@ -19,7 +19,7 @@ export default function NumberBox({ amount, itemType, range, setItemType }) {
 
   const handleInputChange = (e) => {
     let value = parseInt(e.target.innerText.replace(/\D/g, ""), 10) || 0;
-    if (value >= 0 && value <= 999) {
+    if (value >= 0 && value <= 100) {
       setItemType(value);
     } else {
       setItemType(0); // Reset si invalide
