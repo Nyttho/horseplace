@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-outfit",
+  // weight: ["400", "700", "900"],
+  // variable: "--font-outfit",
 });
 
 export const metadata = {
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable}  antialiased font-sans`}>
+      <body className={`${outfit.className}  antialiased font-sans`}>
         <Navbar />
         {children}
         <Footer />
