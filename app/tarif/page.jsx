@@ -6,39 +6,35 @@ export default function Tarif (){
   const fakeOffers = [
     {
       id: 1,
-      title: "Title",
-      subtitle: "Subtitle",
+      title: "Horsplace Intelligent Stable Manager",
+      subtitle: "Gérez efficacement vos box avec une solution intégrée et automatisée.",
       img: avatar,
-      feature1: "Feature1",
-      feature2: "Feature2",
-      feature3: "Feature3"
+      features: ["Gestion automatisée des box", "Surveillance en temps réel", "Rapports et statistiques détaillés", "Notifications personnalisées"]
 
     },
     {
       id: 2,
-      title: "Title",
-      subtitle: "Subtitle",
+      title: "Écosystème complet",
+      subtitle: "Combinez les deux solutions pour une gestion et une réservation optimales.",
       img: avatar,
-      feature1: "Feature1",
-      feature2: "Feature2",
-      feature3: "Feature3"
+      features: ["Intégration fluide entre gestion et réservation", "Synchronisation des données en temps réel", "Accès centralisé aux informations", "Optimisation de la gestion des événements"]
+
 
     },
     {
       id: 3,
-      title: "Title",
-      subtitle: "Subtitle",
+      title: "Horsplace Votre box à portée de clics",
+      subtitle: "Réservez vos box pour les événements en toute simplicité.",
       img: avatar,
-      feature1: "Feature1",
-      feature2: "Feature2",
-      feature3: "Feature3"
+      features: ["Réservation en ligne simplifiée", "Paiement sécurisé", "Suivi des réservations", "Gestion des annulations et des remboursements"]
+
 
     },
   ]
   return( 
 <>
     <section>
-        <div className="flex gap-14 w-3/5 mx-auto">
+        <div className="flex gap-14 w-3/5 mx-auto my-10">
           {fakeOffers.map(fake => (
             <Offer key={fake.id} offer={fake}/>
           ))}
