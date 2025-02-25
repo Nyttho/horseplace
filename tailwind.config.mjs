@@ -20,7 +20,7 @@ export default {
    
     },
     fontFamily: {
-      sans: ["var(--font-outfit)", "sans-serif"],
+      shafarik: ['var(--font-outfit)'],
     },
   },
   plugins: [],

@@ -5,12 +5,15 @@ import NumberBox from "@/app/components/NumberBox";
 import { useState } from "react";
 
 export default function Estimation() {
-    const [horses, setHorses] = useState(0);
-    const [boxes, setBoxes] = useState(0);
-    const [screens, setScreens] = useState(0);
+    const [horses, setHorses] = useState(localStorage.getItem("chevaux") || 0);
+    const [boxes, setBoxes] = useState(localStorage.getItem("boxes") || 0);
+    const [screens, setScreens] = useState(localStorage.getItem("écrans") || 0);
 
     const handleRange = (e, setItemType) => {
-        setItemType(parseInt(e.target.value, 10));
+        const value = e.target.value
+        const item = e.target.name
+        setItemType(parseInt(value, 10));
+        localStorage.setItem(item, value)
     };
 
     return (
@@ -41,11 +44,11 @@ export default function Estimation() {
                         <NumberBox amount={screens} itemType="écrans" range={handleRange} setItemType={setScreens} />
                     {/* Carte pour l'estimation */}
                     <div className="p-6 text-center h-64 flex items-center w-40 flex-wrap justify-center bg-white">
-                        <p className="text-yellow-700 text-md">Votre estimation :</p>
-                        <div className="text-5xl font-bold text-primary-dark">
+                        <p className="text-primary-dark text-md">Votre estimation :</p>
+                        <div className="text-5xl text-primary-dark">
                             {(horses * 10 + boxes * 15 + screens * 20).toString().padStart(3, "0")}
                         </div>
-                        <p className="text-yellow-700 text-sm">Par mois €</p>
+                        <p className="text-primary-dark text-sm"><span className="text-2xl font-bold">€</span> Par mois </p>
                     </div>
                     </div>
                     
