@@ -2,12 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import GridCard from "./components/GridCard";
 import avatar from "@/public/static/images/avatar.jpeg";
-import horse from "@/public/static/images/illustration_horse_1.jpeg"
+import horse from "@/public/static/images/illustration_horse_1.jpeg";
 
 export default function Home() {
   return (
     <>
-      <section className="h-screen  bg-swhite">
+      <section className="h-screen  bg-white">
         <div className="relative w-full h-full overflow-hidden">
           {/* Vidéo en fond */}
           <video
@@ -70,8 +70,8 @@ export default function Home() {
               />
             </div>
             <p>
-              <span className="font-bold text-[#e5e5e5]">Vincent BRAY</span>, Fondateur de
-              Horsplace
+              <span className="font-bold text-[#e5e5e5]">Vincent BRAY</span>,
+              Fondateur de Horsplace
             </p>
           </div>
         </div>
@@ -82,44 +82,68 @@ export default function Home() {
         <div className="grid grid-rows-8 grid-cols-3 gap-5 max-w-screen-xl mx-auto">
           {/* Rectangle 1 */}
           <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-2 flex items-center px-10">
-      <p>
-        Les <span className="underline underline-offset-8">chiffres</span> parlent d’eux-mêmes.
-      </p>
-    </div>
+            <p>
+              Les <span className="underline underline-offset-8">chiffres</span>{" "}
+              parlent d’eux-mêmes.
+            </p>
+          </div>
 
           {/* Carte 1 */}
-          <GridCard title="Stress" percent={95} text={"des équipes constatent une diminution du stress au travail grâce à Horsplace."} />
+          <GridCard
+            title="Stress"
+            percent={95}
+            text={
+              "des équipes constatent une diminution du stress au travail grâce à Horsplace."
+            }
+          />
 
-         {/* Bloc Communication (Occupe col-span-2 & row-span-6) */}
-    <div className="bg-primary-dark text-white p-10 col-span-2 row-span-6 flex flex-col justify-center">
-      <p className="uppercase font-bold text-sm">Communication</p>
-      <p className="text-8xl font-extrabold mt-4 leading-none">100%</p>
-      <p className="mt-6 text-lg leading-relaxed">
-        des écuries équipées rapportent une amélioration dans la communication interne.
-      </p>
-    </div>
+          {/* Bloc Communication (Occupe col-span-2 & row-span-6) */}
+          <div className="bg-primary-dark text-white p-10 col-span-2 row-span-6 flex flex-col justify-center">
+            <p className="uppercase font-bold text-sm">Communication</p>
+            <p className="text-8xl font-extrabold mt-4 leading-none">100%</p>
+            <p className="mt-6 text-lg leading-relaxed">
+              des écuries équipées rapportent une amélioration dans la
+              communication interne.
+            </p>
+          </div>
 
           {/* Carte 2 */}
-          <GridCard title="Économies" percent={20} text={"des coûts opérationnels économisés grâce à une gestion optimisée."} />
-
+          <GridCard
+            title="Économies"
+            percent={20}
+            text={
+              "des coûts opérationnels économisés grâce à une gestion optimisée."
+            }
+          />
         </div>
       </section>
       <section>
         <div className="relative w-full h-80 overflow-hidden">
           <div className="absolute inset-0 bg-gray-800/25 z-10"></div>
           <div className="absolute top-1/2 left-40 transform -translate-y-1/2 z-20 text-white space-y-3">
-            <p className="font-bold text-4xl">Prêt à rejoindre la révolution équestre ?</p>
+            <p className="font-bold text-4xl">
+              Prêt à rejoindre la révolution équestre ?
+            </p>
             <p className="text-3xl">Demandez votre devis gratuit.</p>
           </div>
           <div className="absolute z-20 top-1/2 right-48 transform -translate-y-1/2 flex flex-col gap-3">
             <Link href="/devis">
-              <div className="bg-white text-primary-dark py-1 rounded-md text-center font-bold w-52  px-10">Demander un devis</div>
+              <div className="bg-white text-primary-dark py-1 rounded-md text-center font-bold w-52  px-10">
+                Demander un devis
+              </div>
             </Link>
             <Link href="/contact">
-              <div className="bg-transparent text-white p-3 rounded-md border-[3px] border-white text-center">Nous contacter</div>
+              <div className="bg-transparent text-white p-3 rounded-md border-[3px] border-white text-center">
+                Nous contacter
+              </div>
             </Link>
           </div>
-          <Image src={horse} fill className="object-cover object-[0%_35%]"  alt="image of a horse "/>
+          <Image
+            src={horse}
+            fill
+            className="object-cover object-[0%_35%]"
+            alt="image of a horse "
+          />
         </div>
       </section>
     </>

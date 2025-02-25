@@ -5,7 +5,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,23 +20,17 @@ body {
 }
 
 .font-thicker {
-  text-shadow: 
-    1px 1px 0 currentColor, 
-    -1px -1px 0 currentColor, 
-    1px -1px 0 currentColor, 
-    -1px 1px 0 currentColor,
-    0px 1px 0 currentColor,
-    1px 0px 0 currentColor,
-    0px -1px 0 currentColor,
-    -1px 0px 0 currentColor;
+  text-shadow: 1px 1px 0 currentColor, -1px -1px 0 currentColor,
+    1px -1px 0 currentColor, -1px 1px 0 currentColor, 0px 1px 0 currentColor,
+    1px 0px 0 currentColor, 0px -1px 0 currentColor, -1px 0px 0 currentColor;
 }
 
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 1px; 
-  background: #B78A3D; 
+  height: 1px;
+  background: #b78a3d;
   border-radius: 2px;
   cursor: pointer;
 }
@@ -46,9 +39,9 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 10px; 
+  width: 10px;
   height: 10px;
-  background: #B78A3D; 
+  background: #b78a3d;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -57,8 +50,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background: #B78A3D;
+  background: #b78a3d;
   border-radius: 50%;
   cursor: pointer;
 }
-

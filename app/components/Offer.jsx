@@ -7,7 +7,7 @@ export default function Offer({ offer }) {
       <div className="w-16 h-16 bg-primary-dark rounded-full my-5 overflow-hidden">
         <Image src={offer.img} alt={offer.title} width={500} height={500} />
       </div>
-      <div className="text-primary-dark mb-10 text-center">
+      <div className="text-primary-dark mb-10 text-center flex-grow">
         <h3 className="text-lg font-bold">{offer.title}</h3>
         <h4>{offer.subtitle}</h4>
       </div>
@@ -20,7 +20,9 @@ export default function Offer({ offer }) {
       </div>
       <div className="mt-16">
         <Link href="#">
-          <div className="border-[1px] border-primary-dark py-2 w-40 text-primary-dark rounded-md text-center">Start Now</div>
+          <div className="border-[1px] border-primary-dark py-2 w-40 text-primary-dark rounded-md text-center">
+            Start Now
+          </div>
         </Link>
       </div>
     </div>
