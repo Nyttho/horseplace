@@ -31,3 +31,34 @@ body {
     0px -1px 0 currentColor,
     -1px 0px 0 currentColor;
 }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1px; 
+  background: #B78A3D; 
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Style du bouton (thumb) pour Webkit (Chrome, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px; 
+  height: 10px;
+  background: #B78A3D; 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style du bouton (thumb) pour Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: #B78A3D;
+  border-radius: 50%;
+  cursor: pointer;
+}
+

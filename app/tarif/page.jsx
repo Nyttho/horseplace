@@ -1,5 +1,6 @@
 import Offer from "../components/Offer";
 import avatar from "@/public/static/images/avatar.jpeg"
+import Estimation from "../components/Estimation";
 
 export default function Tarif (){
   const fakeOffers = [
@@ -35,14 +36,19 @@ export default function Tarif (){
     },
   ]
   return( 
-  <section>
-    <h1>Tarif</h1>
-      <div className="flex gap-14 w-3/5 mx-auto">
-        {fakeOffers.map(fake => (
-          <Offer key={fake.id} offer={fake}/>
-        ))}
-      </div>
-  </section>
+<>
+    <section>
+      <h1>Tarif</h1>
+        <div className="flex gap-14 w-3/5 mx-auto">
+          {fakeOffers.map(fake => (
+            <Offer key={fake.id} offer={fake}/>
+          ))}
+        </div>
+    </section>
+    <section>
+      <Estimation />
+    </section>
+</>
 
 );
 };
