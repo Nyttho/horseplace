@@ -58,8 +58,8 @@ const APropos = () => {
       <section className="text-primary-dark p-20 bg-secondary-light mt-1">
         <h3 className="uppercase text-lg font-bold">Horsplace</h3>
         <div className="flex w-3/4 mx-auto">
+          <div className="flex flex-col justify-evenly border-r-[1px] border-primary-dark px-10 pb-10">
             <h4 className="font-bold mb-10">FAQ</h4>
-          <div className="flex flex-col justify-evenly border-r-[1px] border-primary-dark p-10">
             <h5>Question?</h5>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -90,8 +90,9 @@ const APropos = () => {
             </p>
           </div>
           <div>
-          <div className="flex flex-col justify-evenly  p-10">
-       
+          <div className="flex flex-col justify-evenly px-10 pb-10">
+          <div className="h-14"></div>
+
             <h5>Question?</h5>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
