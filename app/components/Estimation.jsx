@@ -9,7 +9,7 @@ export default function Estimation() {
   const [boxes, setBoxes] = useState(0);
   const [screens, setScreens] = useState(0);
 
-  // Chargement des valeurs depuis localStorage uniquement côté client
+  // loading values from localStorage from client side only
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHorses(parseInt(localStorage.getItem("chevaux") || "0", 10));
@@ -38,12 +38,12 @@ export default function Estimation() {
           </p>
           <div className="mt-6 flex space-x-4">
             <Link href="/solution">
-              <button className="border border-white px-4 py-2 rounded">
+              <button className="border border-white px-4 py-2 rounded select-none">
                 En savoir plus
               </button>
             </Link>
             <Link href="/devis">
-              <button className="bg-white text-yellow-800 px-4 py-2 rounded">
+              <button className="bg-white text-yellow-800 px-4 py-2 rounded select-none">
                 Demander un devis
               </button>
             </Link>
@@ -80,7 +80,7 @@ export default function Estimation() {
                   .padStart(3, "0")}
               </div>
               <p className="text-primary-dark text-sm">
-                <span className="text-2xl font-bold">€</span> Par mois{" "}
+                <span className="text-2xl font-bold">€</span> Par mois
               </p>
             </div>
           </div>

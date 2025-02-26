@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section className="h-screen  bg-white">
         <div className="relative w-full h-full overflow-hidden">
-          {/* Vidéo en fond */}
+          {/* video */}
           <video
             autoPlay
             loop
@@ -21,7 +21,7 @@ export default function Home() {
             Votre navigateur ne supporte pas la vidéo.
           </video>
 
-          {/* Contenu par-dessus la vidéo */}
+          {/* content over video */}
           <div className="absolute bottom-48 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
             <Link
               href="/solution"
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section "Ils nous font confiance" */}
+      {/*  "Ils nous font confiance" Section */}
       <section className="py-10 ">
         <div className="mb-10">
           <p className="text-black text-2xl font-bold text-center">
@@ -77,10 +77,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistiques */}
+      {/* Grid */}
       <section className="p-20 bg-white">
         <div className="grid grid-rows-8 grid-cols-3 gap-5 max-w-screen-xl mx-auto">
-          {/* Rectangle 1 */}
           <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-3 flex items-center px-10">
             <p>
               Les <span className="underline underline-offset-8">chiffres</span>{" "}
@@ -88,7 +87,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Carte 1 */}
           <GridCard
             title="Stress"
             percent={95}
@@ -97,7 +95,6 @@ export default function Home() {
             }
           />
 
-          {/* Bloc Communication (Occupe col-span-2 & row-span-6) */}
           <div className="bg-primary-dark text-white p-10 col-span-2 row-span-5 flex flex-col justify-center">
             <p className="uppercase font-bold text-sm">Communication</p>
             <p className="text-8xl font-extrabold mt-4 leading-none">100%</p>
@@ -107,7 +104,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Carte 2 */}
           <GridCard
             title="Économies"
             percent={20}
