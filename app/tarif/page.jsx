@@ -20,6 +20,7 @@ export default function Tarif (){
       features: ["E-Ink", "Wifi", "11.6 pouces", "Autonomie de 6 mois"]
     },
   ]
+  
   return( 
 <>
     <section className="bg-secondary-light py-10">

@@ -1,13 +1,13 @@
-import Estimation from "../components/Estimation";
+import Estimation from "@/app/components/Estimation";
 import Link from "next/link";
 import Image from "next/image";
 import horsePicto from "@/public/static/images/horse-picto.png";
 import heartPicto from "@/public/static/images/heart-picto.png";
 import instructionPicto from "@/public/static/images/instructions-picto.png";
 import headPicto from "@/public/static/images/head-picto.png";
-import checkIcon from "@/public/static/images/check-icon.png";
 import eInk from "@/public/static/images/e-ink_illustration.png"
 import hero from "@/public/static/images/illustration_horse_2.jpg"
+import SolutionCheck from "@/app/components/SolutionCheck"
 const Solution = () => {
   return (
     <>
@@ -143,71 +143,16 @@ const Solution = () => {
           </p>
           <div className="flex items-end">
             <ul className="flex flex-col gap-5 flex-1">
-              <li className="flex justify-start items-center gap-5 font-bold text-xl">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <Image
-                    src={checkIcon}
-                    width={96}
-                    height={96}
-                    alt=""
-                    className="object-contain object-center"
-                  />
-                </div>
-                Robustesse extrême
-              </li>
-              <li className="flex justify-start items-center gap-5 font-bold text-xl">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <Image
-                    src={checkIcon}
-                    width={96}
-                    height={96}
-                    alt=""
-                    className="object-contain object-center"
-                  />
-                </div>
-                Autonomie exceptionnelle
-              </li>
-              <li className="flex justify-start items-center gap-5 font-bold text-xl">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <Image
-                    src={checkIcon}
-                    width={96}
-                    height={96}
-                    alt=""
-                    className="object-contain object-center"
-                  />
-                </div>
-                Affichage ultra-lisible
-              </li>
-              <li className="flex justify-start items-center gap-5 font-bold text-xl">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <Image
-                    src={checkIcon}
-                    width={96}
-                    height={96}
-                    alt=""
-                    className="object-contain object-center"
-                  />
-                </div>
-                Informations en temps réel
-              </li>
-              <li className="flex justify-start items-center gap-5 font-bold text-xl">
-                <div className="w-12 h-12 flex-shrink-0">
-                  <Image
-                    src={checkIcon}
-                    width={96}
-                    height={96}
-                    alt=""
-                    className="object-contain object-center"
-                  />
-                </div>
-                Prix raisonnable
-              </li>
+              <SolutionCheck text="Robustesse extrême" />
+              <SolutionCheck text="Autonomie exceptionnelle" />
+              <SolutionCheck text="Affichage ultra-lisible" />
+              <SolutionCheck text="Informations en temps réel" />
+              <SolutionCheck text="Prix raisonnable" />
             </ul>
             <div className="bg-white grow p-10 rounded-3xl h-[420px] relative overflow-hidden">
               <h4 className="text-center text-xl font-bold">Ecran e-ink</h4>
-              <div className="w-[520px] h-full absolute left-1/2 transform -translate-x-1/2 top-28 ">
-                <Image src={eInk} width={500} height={500} alt="illustration de l'écran e-ink" className="object-cover"/>
+              <div className="w-[520px] h-full absolute left-1/2 transform -translate-x-1/2 top-28">
+                <Image src={eInk} width={500} height={500} alt="illustration de l'écran e-ink" className="object-cover saturate-[1.60]"/>
               </div>
             </div>
           </div>
