@@ -9,7 +9,8 @@ export default function SolutionIconList({ icon, label, text }) {
           width={96}
           height={96}
           alt=""
-          className="object-contain object-center"
+          className="object-contain object-center select-none"
+          draggable="false"
         />
       </div>
       <div>
