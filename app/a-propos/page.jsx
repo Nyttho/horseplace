@@ -2,8 +2,8 @@ import Link from "next/link";
 const APropos = () => {
   return (
     <>
-      <section className="bg-secondary-light h-screen py-10 px-20 text-primary-dark ">
-        <div className="max-w-screen-lg mx-auto flex flex-col gap-10 h-full">
+      <section className="bg-secondary-light min-h-screen py-16 px-20 text-primary-dark ">
+        <div className="max-w-screen-lg mx-auto flex flex-col gap-10">
           <h2 className="text-center text-6xl font-extrabold">
             À propos de nous
           </h2>
@@ -36,7 +36,7 @@ const APropos = () => {
           </p>
 
           <Link href="/devis">
-            <div className="bg-primary-dark text-white py-1 rounded-md text-center w-52  px-10 mx-auto">
+            <div className="bg-primary-dark text-white mt-10 py-1 rounded-md text-center w-52  px-10 mx-auto">
               Demander un devis
             </div>
           </Link>
