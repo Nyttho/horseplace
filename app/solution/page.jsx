@@ -95,7 +95,7 @@ const Solution = () => {
             de réunir toutes les fonctionnalités essentielles pour une gestion
             optimale des écuries :
           </p>
-          <div className="flex items-end">
+          <div className="flex items-center">
             <ul className="flex flex-col gap-5 flex-1">
               <SolutionCheck text="Robustesse extrême" />
               <SolutionCheck text="Autonomie exceptionnelle" />
