@@ -27,7 +27,7 @@ export default function NumberBox({ amount, itemType, range, setItemType }) {
   };
 
   return (
-    <div className="bg-white p-6 text-center w-40 flex flex-col justify-between items-center h-64 ">
+    <div className="bg-white px-6 py-12 text-center w-40 flex flex-col justify-between items-center h-64 ">
       {/* Zone de nombre éditable */}
       <div
         contentEditable
@@ -38,7 +38,7 @@ export default function NumberBox({ amount, itemType, range, setItemType }) {
           if (e.key === "Enter") e.target.blur(); // Valider avec Entrée
         }}
       >
-        {amount.toString().padStart(3, "0")}
+        {amount.toString().padStart(2, "0")}
       </div>
 
       <p className="text-primary-dark text-sm">

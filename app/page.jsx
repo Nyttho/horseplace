@@ -82,7 +82,7 @@ export default function Home() {
         <div className="grid grid-rows-8 grid-cols-3 gap-5 max-w-screen-xl mx-auto">
           <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-3 flex items-center px-10">
             <p>
-              Les <span className="underline underline-offset-8">chiffres</span>{" "}
+              Les <span className="underline underline-offset-8 decoration-black">chiffres</span>{" "}
               parlent d’eux-mêmes.
             </p>
           </div>

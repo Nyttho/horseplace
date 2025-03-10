@@ -26,8 +26,8 @@ export default function Estimation() {
   };
 
   return (
-    <div className="bg-primary-dark text-white px-10 py-28 my-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+    <div className="bg-primary-dark text-white px-14 pt-12 pb-28 my-10 w-3/4 mx-auto rounded-3xl">
+      <div className=" mx-auto flex flex-col md:flex-row justify-around items-center gap-10">
         {/* Section texte et boutons */}
         <div className="flex-1">
           <h2 className="text-4xl font-bold">ESTIMEZ VOTRE PRIX</h2>
@@ -36,14 +36,14 @@ export default function Estimation() {
             e-Ink robustes et entièrement personnalisables pour une gestion
             optimale de vos boxes.
           </p>
-          <div className="mt-6 flex space-x-4">
-            <Link href="/solution">
-              <button className="border border-white px-4 py-2 rounded select-none">
+          <div className="mt-6 flex gap-4 w-full">
+            <Link href="/solution" className="flex-1">
+              <button className="border border-white px-6 py-5 rounded select-none w-full">
                 En savoir plus
               </button>
             </Link>
-            <Link href="/devis">
-              <button className="bg-white text-yellow-800 px-4 py-2 rounded select-none">
+            <Link href="/devis" className="flex-1">
+              <button className="bg-white text-yellow-800 px-6 py-5 rounded select-none w-full">
                 Demander un devis
               </button>
             </Link>
@@ -51,8 +51,8 @@ export default function Estimation() {
         </div>
 
         {/* Section des inputs et estimation */}
-        <div className="flex-[2] flex justify-center items-center ">
-          <div className="flex overflow-hidden rounded-sm border space-x-[1px]">
+        <div className="flex-[2] flex justify-end items-center ">
+          <div className="flex overflow-hidden rounded-xl border space-x-[1px]">
             <NumberBox
               amount={horses}
               itemType="chevaux"
@@ -72,16 +72,15 @@ export default function Estimation() {
               setItemType={setScreens}
             />
             {/* Carte pour l'estimation */}
-            <div className="p-6 text-center h-64 flex items-center w-40 flex-wrap justify-center bg-white">
+            <div className="px-6 py-12 text-center h-64 flex items-center w-40 flex-col flex-wrap justify-between bg-white">
               <p className="text-primary-dark text-md">Votre estimation :</p>
-              <div className="text-5xl text-primary-dark">
+              <div className="text-3xl text-primary-dark border-[1px] border-primary-dark py-2 px-5 rounded-lg my-2 relative">
                 {(horses * 10 + boxes * 15 + screens * 20)
                   .toString()
                   .padStart(3, "0")}
+                €<span className="text-sm absolute top-3 right-3">*</span>
               </div>
-              <p className="text-primary-dark text-sm">
-                <span className="text-2xl font-bold">€</span> Par mois
-              </p>
+              <p className="text-primary-dark text-sm">Par mois</p>
             </div>
           </div>
         </div>
