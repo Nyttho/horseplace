@@ -6,35 +6,28 @@ export default function Tarif (){
   const fakeOffers = [
     {
       id: 1,
-      title: "Horsplace Intelligent Stable Manager",
-      subtitle: "Gérez efficacement vos box avec une solution intégrée et automatisée.",
+      title: "Moyen écran",
+      price: 89,
       img: avatar,
-      features: ["Gestion automatisée des box", "Surveillance en temps réel", "Rapports et statistiques détaillés", "Notifications personnalisées"]
+      features: ["E-Ink", "Bluetooth", "7.5 pouces", "Autonomie de 5 ans"]
 
     },
     {
       id: 2,
-      title: "Écosystème complet",
-      subtitle: "Combinez les deux solutions pour une gestion et une réservation optimales.",
+      title: "Grand écran",
+      price: 189,
       img: avatar,
-      features: ["Intégration fluide entre gestion et réservation", "Synchronisation des données en temps réel", "Accès centralisé aux informations", "Optimisation de la gestion des événements"]
-
-
-    },
-    {
-      id: 3,
-      title: "Horsplace Votre box à portée de clics",
-      subtitle: "Réservez vos box pour les événements en toute simplicité.",
-      img: avatar,
-      features: ["Réservation en ligne simplifiée", "Paiement sécurisé", "Suivi des réservations", "Gestion des annulations et des remboursements"]
-
-
+      features: ["E-Ink", "Wifi", "11.6 pouces", "Autonomie de 6 mois"]
     },
   ]
   return( 
 <>
-    <section>
-        <div className="flex gap-14 w-3/5 mx-auto my-10">
+    <section className="bg-secondary-light py-10">
+      <div className="text-primary-dark text-center mt-10">
+        <h2 className="text-5xl font-bold mb-6">Offres tarifaires</h2>
+        <q className="text-lg">Choisissez l'abonnement qui correspond à vos besoins. Aucun engagement caché.</q>
+      </div>
+        <div className="flex gap-14 w-3/5 mx-auto my-10 justify-center">
           {fakeOffers.map(fake => (
             <Offer key={fake.id} offer={fake}/>
           ))}
