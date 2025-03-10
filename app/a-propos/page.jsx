@@ -3,49 +3,36 @@ const APropos = () => {
   return (
     <>
       <section className="bg-secondary-light h-screen py-10 px-20 text-primary-dark ">
-        <div className="w-3/4 mx-auto flex flex-col justify-around h-full">
-          <h2 className="text-center  text-4xl font-extrabold">
+        <div className="max-w-screen-lg mx-auto flex flex-col gap-10 h-full">
+          <h2 className="text-center text-6xl font-extrabold">
             À propos de nous
           </h2>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            inventore nam alias sint repellendus optio, temporibus officia
-            quibusdam quis accusantium earum tempora, aut quod obcaecati ipsa in
-            tenetur sapiente amet. Unde magnam fuga sit corrupti impedit
-            ratione, laudantium eveniet dolorum nulla quam corporis iste
-            consectetur temporibus officiis quod sapiente reprehenderit amet
-            recusandae quis, voluptates repellendus voluptatibus incidunt
-            asperiores. Inventore, ratione. Non iste, sint, ipsam quidem iure
-            obcaecati vero nisi a veritatis nam, inventore sed cumque quaerat
-            eaque nostrum. Sunt non accusamus delectus vitae optio sed in magnam
-            velit ipsum repudiandae? Eos alias veniam libero magnam adipisci
-            voluptates, sunt, vero totam consequuntur saepe corrupti explicabo
-            maiores voluptate numquam tempore! Eos minus ipsa magni architecto
-            amet asperiores consectetur tempora. Sunt, ullam consequuntur. Quam,
-            possimus eos sit soluta reiciendis minus enim ducimus ipsam sint
-            quibusdam, voluptatum consectetur vitae nobis inventore
-            necessitatibus, natus voluptatibus animi at porro dolore voluptatem
-            dolorum id? Quos, corporis ducimus.
+          <p className="text-xl">
+            Tout a commencé par une observation simple mais récurrente: <br />
+            dans le milieu équestre, la gestion quotidienne des écuries, des
+            boxes et des soins des chevaux est souvent complexe, stressante et
+            chronophage.
           </p>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            inventore nam alias sint repellendus optio, temporibus officia
-            quibusdam quis accusantium earum tempora, aut quod obcaecati ipsa in
-            tenetur sapiente amet. Unde magnam fuga sit corrupti impedit
-            ratione, laudantium eveniet dolorum nulla quam corporis iste
-            consectetur temporibus officiis quod sapiente reprehenderit amet
-            recusandae quis, voluptates repellendus voluptatibus incidunt
-            asperiores. Inventore, ratione. Non iste, sint, ipsam quidem iure
-            obcaecati vero nisi a veritatis nam, inventore sed cumque quaerat
-            eaque nostrum. Sunt non accusamus delectus vitae optio sed in magnam
-            velit ipsum repudiandae? Eos alias veniam libero magnam adipisci
-            voluptates, sunt, vero totam consequuntur saepe corrupti explicabo
-            maiores voluptate numquam tempore! Eos minus ipsa magni architecto
-            amet asperiores consectetur tempora. Sunt, ullam consequuntur. Quam,
-            possimus eos sit soluta reiciendis minus enim ducimus ipsam sint
-            quibusdam, voluptatum consectetur vitae nobis inventore
-            necessitatibus, natus voluptatibus animi at porro dolore voluptatem
-            dolorum id? Quos, corporis ducimus.
+          <p className="text-xl">
+            En échangeant avec des propriétaires d'écuries, des cavaliers
+            professionnels, des soigneurs équins et des gérants de centre
+            équestres, j'ai réalisé à quel point cette charge mentale pesait
+            pour eux.
+          </p>
+          <p className="text-xl">
+            C'est à ce moment-là que Horsplace est né : une solution innovante
+            pour simplifier l'organisation des écuries et optimiser le suivi des
+            chevaux.
+          </p>
+          <p className="text-xl">
+            Horsplace révolutionne la gestion des infrastructures équestres
+            grâce à des technologies numériques durables.
+          </p>
+          <p className="text-xl">
+            Nous développons des solutions adaptées aux besoins des exploitants
+            équestres, notamment : Un écran e-ink connecté remplaçant la
+            traditionnelle ardoise de box, offrant une mise à jour en temps réél
+            des informations.
           </p>
 
           <Link href="/devis">
@@ -90,38 +77,38 @@ const APropos = () => {
             </p>
           </div>
           <div>
-          <div className="flex flex-col justify-evenly px-10 pb-10">
-          <div className="h-14"></div>
+            <div className="flex flex-col justify-evenly px-10 pb-10">
+              <div className="h-14"></div>
 
-            <h5>Question?</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
-            <h5>Question?</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
-            <h5>Question?</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
-            <h5>Question?</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
-          </div>
+              <h5>Question?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+              <h5>Question?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+              <h5>Question?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+              <h5>Question?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
           </div>
         </div>
       </section>
