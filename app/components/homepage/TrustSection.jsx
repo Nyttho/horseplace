@@ -1,9 +1,9 @@
-export default function TrustSection() {
+export default function TrustSection({ trustContent }) {
   return (
     <section className="py-10 ">
       <div className="mb-10">
         <p className="text-black text-2xl font-bold text-center">
-          Ils nous font confiance
+          {trustContent.catchPhrase}
         </p>
       </div>
       <div className="mt-3">

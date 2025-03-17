@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function HeroSection() {
+export default function HeroSection({ heroContent }) {
   return (
     <section className="h-screen  bg-white">
       <div className="relative w-full h-full overflow-hidden">
@@ -12,7 +12,7 @@ export default function HeroSection() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/video/motion.webm" type="video/webm" />
+          <source src={heroContent.videoUrl} type="video/webm" />
           Votre navigateur ne supporte pas la vidéo.
         </video>
 
@@ -22,7 +22,7 @@ export default function HeroSection() {
             href="/solution"
             className="py-5 px-8 text-white bg-primary-dark rounded-md text-xl hover:bg-primary-light shadow-lg"
           >
-            Découvrir notre solution
+            {heroContent.btnText}
           </Link>
         </div>
       </div>
