@@ -2,18 +2,12 @@ import SolutionCheck from "@/app/components/SolutionCheck";
 import Image from "next/image";
 import eInk from "@/public/static/images/e-ink_illustration.png";
 
-export default function WhySection() {
+export default function WhySection({ whyContent }) {
   return (
     <section className="bg-secondary-light py-14">
       <div className="mx-40">
-        <h3 className="text-2xl font-bold mb-10">
-          Pourquoi choisir Horsplace ?
-        </h3>
-        <p className="text-primary-dark text-xl mb-10">
-          Horsplace est actuellement la seule solution sur le marché capable de
-          réunir toutes les fonctionnalités essentielles pour une gestion
-          optimale des écuries :
-        </p>
+        <h3 className="text-2xl font-bold mb-10">{whyContent.title}</h3>
+        <p className="text-primary-dark text-xl mb-10">{whyContent.subtitle}</p>
         <div className="flex items-center">
           <ul className="flex flex-col gap-5 flex-1">
             <SolutionCheck text="Robustesse extrême" />

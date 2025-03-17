@@ -5,16 +5,14 @@ import heartPicto from "@/public/static/images/heart-picto.png";
 import instructionPicto from "@/public/static/images/instructions-picto.png";
 import headPicto from "@/public/static/images/head-picto.png";
 
-export default function WhatSection() {
+export default function WhatSection({ whatContent }) {
   return (
     <section className="py-14">
       <div className="flex">
         <div className="flex-1 flex flex-col justify-between items-start w-1/2 ml-40 my-28">
-          <h3 className="font-bold text-2xl">Qu'est ce que Horsplace ?</h3>
+          <h3 className="font-bold text-2xl">{whatContent.title}</h3>
           <p className="w-3/4 text-primary-dark text-lg leading-8">
-            Horsplace est la solution conçue pour simplifier la gestion
-            quotidienne des écuries en affichant directement sur un écran dans
-            chaque box, toutes les informations essentielles sur le cheval.
+            {whatContent.text}
           </p>
           <Link
             href="/a-propos"

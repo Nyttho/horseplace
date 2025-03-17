@@ -16,8 +16,6 @@ export default async function Home() {
     const data = await response.json();
     const home = data.data;
 
-    console.log(home);
-
     return (
       <>
         <HeroSection heroContent={home.heroSection} />
