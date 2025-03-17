@@ -24,7 +24,7 @@ export default function JoinSection({ joinContent }) {
           </Link>
         </div>
         <Image
-          src={horse}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.image.formats.large.url}`}
           fill
           className="object-cover object-[0%_35%]"
           alt="image of a horse "

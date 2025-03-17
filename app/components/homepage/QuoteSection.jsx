@@ -9,7 +9,7 @@ export default function QuoteSection({ testimonialContent }) {
         <div className="flex flex-col justify-center items-center">
           <div className="w-32 h-32 bg-primary-dark rounded-full my-5 overflow-hidden">
             <Image
-              src={avatar}
+              src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${testimonialContent.authorImg.formats.thumbnail.url}`}
               width={500}
               height={500}
               alt="Picture of the author"
