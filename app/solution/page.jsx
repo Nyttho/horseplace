@@ -9,6 +9,7 @@ import eInk from "@/public/static/images/e-ink_illustration.png";
 import hero from "@/public/static/images/illustration_horse_2.jpg";
 import SolutionCheck from "@/app/components/SolutionCheck";
 import SolutionIconList from "@/app/components/SolutionIconList";
+
 const Solution = () => {
   return (
     <>
