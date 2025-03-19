@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import horse from "@/public/static/images/illustration_horse_1.jpeg";
 
 export default function JoinSection({ joinContent }) {
+  const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.image.formats.large.url}`;
   return (
     <section>
       <div className="relative w-full h-80 overflow-hidden">
@@ -24,7 +24,7 @@ export default function JoinSection({ joinContent }) {
           </Link>
         </div>
         <Image
-          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.image.formats.large.url}`}
+          src={illustration}
           fill
           className="object-cover object-[0%_35%]"
           alt="image of a horse "

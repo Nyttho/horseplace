@@ -6,6 +6,7 @@ export default function HeroSection({ heroContent }) {
   const titleArray = heroContent.title.split(" ");
   const emphasis = titleArray[1];
   const underline = titleArray[titleArray.length - 1];
+  const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.formats.large.url}`;
 
   return (
     <section className="h-screen">
@@ -28,7 +29,7 @@ export default function HeroSection({ heroContent }) {
           </Link>
         </div>
         <Image
-          src={hero}
+          src={illustration}
           alt="cheval au galop"
           fill={true}
           className="object-cover object-top"
