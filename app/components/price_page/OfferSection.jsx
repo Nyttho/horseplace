@@ -1,5 +1,5 @@
 import Offer from "../Offer";
-import avatar from "@/public/static/images/avatar.jpeg";
+import logo from "@/public/static/images/horsplace_logo.png";
 
 export default function OfferSection() {
   const fakeOffers = [
@@ -7,14 +7,16 @@ export default function OfferSection() {
       id: 1,
       title: "Moyen écran",
       price: 89,
-      img: avatar,
+      img: logo,
+      size: "medium",
       features: ["E-Ink", "Bluetooth", "7.5 pouces", "Autonomie de 5 ans"],
     },
     {
       id: 2,
       title: "Grand écran",
       price: 189,
-      img: avatar,
+      img: logo,
+      size: "big",
       features: ["E-Ink", "Wifi", "11.6 pouces", "Autonomie de 6 mois"],
     },
   ];

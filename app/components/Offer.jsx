@@ -1,12 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
+
+import ScreenSize from "./price_page/ScreenSize";
 
 export default function Offer({ offer }) {
   return (
-    <div className="w-64 flex flex-col items-center justify-center border-[1px] border-primary-dark p-8 rounded-sm">
-      <div className="w-16 h-16 bg-primary-dark rounded-full my-5 overflow-hidden">
-        <Image src={offer.img} alt={offer.title} width={500} height={500} />
-      </div>
+    <div className="w-72 flex flex-col items-center justify-around border-[1px] border-primary-dark p-8 rounded-sm">
+      <ScreenSize offer={offer} />
       <div className="text-primary-dark mb-10 text-center flex-grow">
         <h3 className="text-lg font-bold">{offer.title}</h3>
         <h4>{offer.price}€</h4>

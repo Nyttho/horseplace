@@ -27,7 +27,7 @@ export default function NumberBox({ amount, itemType, range, setItemType }) {
   };
 
   return (
-    <div className="bg-white px-6 py-12 text-center w-40 flex flex-col justify-between items-center h-64 ">
+    <div className="bg-white px-7 py-12 text-center w-40 flex flex-col justify-between items-center h-64 ">
       {/* Zone de nombre éditable */}
       <div
         contentEditable
@@ -35,7 +35,7 @@ export default function NumberBox({ amount, itemType, range, setItemType }) {
         className="text-5xl  text-primary-dark outline-none focus:ring-2 focus:ring-primary-dark px-2"
         onBlur={handleInputChange}
         onKeyDown={(e) => {
-          if (e.key === "Enter") e.target.blur(); // Valider avec Entrée
+          if (e.key === "Enter") e.target.blur();
         }}
       >
         {amount.toString().padStart(2, "0")}

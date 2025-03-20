@@ -6,8 +6,7 @@ export default function ContactForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [feedBack, setFeedBack] = useState(null); // { message: "...", type: "success" | "error" }
-
+  const [feedBack, setFeedBack] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);

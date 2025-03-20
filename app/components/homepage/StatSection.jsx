@@ -15,15 +15,12 @@ export default async function StatSection() {
 
     return (
       <section className="p-20 bg-white">
-        <div className="grid grid-rows-8 grid-cols-3 gap-5 max-w-screen-xl mx-auto">
-          <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-3 flex items-center px-10">
-            <p>
-              Les{" "}
-              <span className="underline underline-offset-8 decoration-black">
-                chiffres
-              </span>{" "}
-              parlent d’eux-mêmes.
-            </p>
+        <div
+          className="grid grid-cols-3 gap-6 max-w-screen-xl mx-auto"
+          style={{ gridTemplateRows: "repeat(8, 60px)" }}
+        >
+          <div className="bg-white text-primary-dark font-extrabold text-6xl col-span-2 row-span-4 flex items-end py-14 px-10 py-auto">
+            <p>Les chiffres parlent d'eux-même.</p>
           </div>
 
           <GridCard
@@ -32,8 +29,8 @@ export default async function StatSection() {
             text={stats[1].description}
           />
 
-          <div className="bg-primary-dark text-white p-10 col-span-2 row-span-5 flex flex-col justify-center">
-            <p className="uppercase font-bold text-sm">{stats[0].title}</p>
+          <div className="bg-primary-dark text-white p-12 col-span-2 row-start-6 -row-end-1 flex flex-col justify-center">
+            <p className="uppercase font-bold text-3xl">{stats[0].title}</p>
             <p className="text-8xl font-extrabold mt-4 leading-none">
               {stats[0].value}%
             </p>

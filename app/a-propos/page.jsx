@@ -13,7 +13,6 @@ const APropos = async () => {
     const data = await response.json();
     const aboutUsData = data.data;
 
-    console.log(aboutUsData);
     return (
       <>
         <AboutSection about={aboutUsData.aboutUs} />

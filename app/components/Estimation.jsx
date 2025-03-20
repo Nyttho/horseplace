@@ -27,7 +27,7 @@ export default function Estimation() {
 
   return (
     <section>
-      <div className="bg-primary-dark text-white px-14 pt-12 pb-28 my-10 w-3/4 mx-auto rounded-3xl">
+      <div className="bg-primary-dark text-white px-16 py-12 my-10 w-4/5 mx-auto rounded-3xl">
         <div className=" mx-auto flex flex-col md:flex-row justify-around items-center gap-10">
           {/* Section texte et boutons */}
           <div className="flex-1">
@@ -52,14 +52,8 @@ export default function Estimation() {
           </div>
 
           {/* Section des inputs et estimation */}
-          <div className="flex-[2] flex justify-end items-center ">
-            <div className="flex overflow-hidden rounded-xl border space-x-[1px]">
-              <NumberBox
-                amount={horses}
-                itemType="chevaux"
-                range={handleRange}
-                setItemType={setHorses}
-              />
+          <div className="flex-1 flex justify-center items-center ">
+            <div className="flex overflow-hidden rounded-xl border space-x-[1px] mb-10">
               <NumberBox
                 amount={boxes}
                 itemType="boxes"
@@ -68,14 +62,14 @@ export default function Estimation() {
               />
               <NumberBox
                 amount={screens}
-                itemType="écrans"
+                itemType="batiments"
                 range={handleRange}
                 setItemType={setScreens}
               />
               {/* Carte pour l'estimation */}
-              <div className="px-6 py-12 text-center h-64 flex items-center w-40 flex-col flex-wrap justify-between bg-white">
+              <div className="px-4 py-12 text-center h-64 flex items-center min-w-40 flex-col flex-wrap justify-between bg-white">
                 <p className="text-primary-dark text-md">Votre estimation :</p>
-                <div className="text-3xl text-primary-dark border-[1px] border-primary-dark py-2 px-5 rounded-lg my-2 relative">
+                <div className="text-3xl text-primary-dark border-[1px] border-primary-dark py-2 px-5 rounded-lg my-2 mx- 2 relative">
                   {(horses * 10 + boxes * 15 + screens * 20)
                     .toString()
                     .padStart(3, "0")}
@@ -86,6 +80,14 @@ export default function Estimation() {
             </div>
           </div>
         </div>
+        <p>
+          *Cette estimation est fournie à titre indicatif et ne constitue pas un
+          engagement contractuel. Le prix exact peut varier en fonction des
+          besoins spécifiques et des options choisies. Pour obtenir un devis
+          détaillé, veuillez nous contacter. Cette estimation concerne
+          uniquement l'abonnement aux services et n'inclut pas le prix des
+          écrans.
+        </p>
       </div>
     </section>
   );
