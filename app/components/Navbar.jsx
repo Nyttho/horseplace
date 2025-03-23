@@ -23,13 +23,12 @@ const Navbar = () => {
       </div>
 
       {/* Bouton devis */}
-      
-        <Link href="/devis">
-          <div className="border-[3px] p-3 rounded-md border-primary-light hover:text-white hover:bg-primary-light font-bold text-primary-light">
-            Demander un devis
-          </div>
-        </Link>
-     
+
+      <Link href="/contact">
+        <div className="border-[3px] p-3 rounded-md border-primary-light hover:text-white hover:bg-primary-light font-bold text-primary-light">
+          Demander un devis
+        </div>
+      </Link>
     </div>
   );
 };

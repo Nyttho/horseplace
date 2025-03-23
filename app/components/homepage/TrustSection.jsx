@@ -1,7 +1,8 @@
+import Image from "next/image";
 export default async function TrustSection({ trustContent }) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/clients`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/clients?populate=*`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");
@@ -9,7 +10,6 @@ export default async function TrustSection({ trustContent }) {
     const data = await response.json();
     const clients = data.data;
 
-    console.log(clients);
     return (
       <section className="py-10 ">
         <div className="mb-10">
@@ -19,12 +19,19 @@ export default async function TrustSection({ trustContent }) {
         </div>
         <div className="mt-3">
           <ul className="flex gap-5 justify-center items-center">
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
-            <li className="w-16 h-16 rounded-full bg-primary-dark"></li>
+            {clients.map((client) => (
+              <li
+                className="w-16 h-16 rounded-full bg-primary-dark flex justify-center items-center"
+                key={client.id}
+              >
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${client.logo.formats.thumbnail.url}`}
+                  width={500}
+                  height={500}
+                  alt={client.name}
+                />
+              </li>
+            ))}
           </ul>
         </div>
       </section>

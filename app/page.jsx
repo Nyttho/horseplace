@@ -28,7 +28,7 @@ export default async function Home() {
   } catch (err) {
     console.error("Erreur lors de la récupération des données", err);
     return (
-      <div>
+      <div className="grow text-center flex justify-center items-center">
         <h1>Erreur lors du chargement des données</h1>
       </div>
     );

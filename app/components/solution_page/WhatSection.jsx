@@ -12,7 +12,6 @@ export default async function WhatSection({ whatContent }) {
     const data = await response.json();
     const elementList = data.data;
 
-    console.log(elementList);
     return (
       <section className="py-14">
         <div className="flex">

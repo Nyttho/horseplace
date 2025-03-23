@@ -1,7 +1,7 @@
 import checkIcon from "@/public/static/images/check-icon.png";
 import Image from "next/image";
 
-export default function Check({ text }) {
+export default function SolutionCheck({ text }) {
   return (
     <li className="flex justify-start items-center gap-5 text-xl">
       <div className="w-12 h-12 flex-shrink-0">

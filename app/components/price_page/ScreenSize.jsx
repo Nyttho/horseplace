@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import logo from "@/public/static/images/horsplace_logo.png";
 
 export default function ScreenSize({ offer }) {
   const [dynamicClass, setDynamicClass] = useState("");
@@ -14,18 +15,13 @@ export default function ScreenSize({ offer }) {
       setDynamicClass("w-20 h-14");
       setLogoSize(16);
     }
-  }, [offer.size]); // On met à jour l'état lorsque l'offer.size change
+  }, [offer.size]);
 
   return (
     <div
       className={`${dynamicClass} my-5 overflow-hidden border-[3px] border-black flex justify-center items-center rounded-sm`}
     >
-      <Image
-        src={offer.img}
-        alt={offer.title}
-        width={logoSize}
-        height={logoSize}
-      />
+      <Image src={logo} alt={offer.title} width={logoSize} height={logoSize} />
     </div>
   );
 }

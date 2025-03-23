@@ -15,8 +15,6 @@ export default async function Solution() {
     const data = await response.json();
     const solution = data.data;
 
-    console.log(solution);
-
     return (
       <>
         <HeroSection heroContent={solution.Header} />
