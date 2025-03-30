@@ -1,8 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-
 export default function JoinSection({ joinContent }) {
   const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.image.formats.large.url}`;
+
   return (
     <section>
       {/* Desktop version - only for extra large screens */}
@@ -35,13 +33,13 @@ export default function JoinSection({ joinContent }) {
       </div>
 
       {/* Mobile/Tablet version - for all screens under xl breakpoint */}
-      <div className="relative w-full h-64 overflow-hidden xl:hidden">
+      <div className="relative w-full h-72 overflow-hidden xl:hidden">
         <div className="absolute inset-0 bg-gray-800/25 z-10"></div>
-        <div className="absolute top-6 left-0 right-0 z-20 text-white text-center">
+        <div className="absolute top-6 left-0 right-0 z-20 text-white text-center pb-10">
           <p className="font-bold text-2xl sm:text-3xl">{joinContent.title}</p>
           <p className="text-xl sm:text-2xl">{joinContent.subtitle}</p>
         </div>
-        <div className="absolute z-20 bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+        <div className="absolute z-20 bottom-8 left-0 right-0 flex flex-col items-center gap-4">
           <Link href="/devis">
             <div className="bg-white text-primary-dark py-2 rounded-md text-center font-bold w-48 sm:w-52">
               Demander un devis
@@ -57,7 +55,7 @@ export default function JoinSection({ joinContent }) {
           <Image
             src={illustration}
             fill
-            className="object-cover object-[70%_35%] scale-[2] -translate-x-10"
+            className="object-cover object-[50%_40%] scale-[1.8] -translate-x-5"
             alt="image of a horse"
           />
         </div>
