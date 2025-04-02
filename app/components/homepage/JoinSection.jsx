@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 export default function JoinSection({ joinContent }) {
   const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.image.formats.large.url}`;
 

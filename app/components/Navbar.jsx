@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/logo.svg";
+import logo from "@/public/static/images/logo-horsplace.png";
 import NavLink from "./NavLink";
 
 const Navbar = () => {
@@ -94,7 +94,7 @@ const Navbar = () => {
           className="fixed right-0 top-0 w-full bg-white shadow-lg z-40 transition-all duration-300 ease-in-out overflow-hidden"
           style={{
             height: isMenuOpen ? "auto" : "0",
-            maxHeight: isMenuOpen ? "300px" : "0",
+            maxHeight: isMenuOpen ? "320px" : "0",
             paddingTop: isMenuOpen ? "80px" : "0",
             paddingBottom: isMenuOpen ? "20px" : "0",
             opacity: isMenuOpen ? 1 : 0,
