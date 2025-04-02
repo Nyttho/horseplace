@@ -26,7 +26,7 @@ export default function Footer() {
           {links.map((link) => (
             <Link
               href={link.href}
-              className="w-full py-2 mt-2 border-b lg:border-none border-primary-dark text-left"
+              className="w-full py-2 mt-2 border-b lg:border-none lg:text-center border-primary-dark text-left"
               key={link.label}
             >
               <li>{link.label}</li>
@@ -52,9 +52,17 @@ export default function Footer() {
       <hr className="border-primary-dark w-full lg:w-3/4 mx-auto my-6" />
 
       {/* Copyright */}
-      <p className="text-center text-sm">
-        &copy; 2025 Horsplace. Tous droits réservés.
-      </p>
+      <div className="mx-auto flex flex-col items-center gap-2 text-center">
+        <Link
+          href="/mentions-legales"
+          className="text-gray-400 text-sm font-normal hover:text-primary-dark transition-colors duration-300"
+        >
+          Mentions légales
+        </Link>
+        <p className="text-center text-sm">
+          &copy; 2025 Horsplace. Tous droits réservés.
+        </p>
+      </div>
     </footer>
   );
 }
