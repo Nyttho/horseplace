@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function AboutSection({ about }) {
   return (
-    <section className=" py-16 px-20 text-primary-dark ">
+    <section className=" py-16 p-10 lg:px-20 text-primary-dark ">
       <div className="max-w-screen-lg mx-auto flex flex-col gap-10">
-        <h2 className="text-center text-6xl font-extrabold text-black">
+        <h2 className="text-center text-2xl lg:text-6xl font-extrabold text-black">
           {about.title}
         </h2>
         <p className="text-xl">{about.text}</p>

@@ -16,7 +16,7 @@ export default async function WhySection({ whyContent }) {
     const whyListElement = data.data;
 
     return (
-      <section className="py-14 px-4 md:px-8">
+      <section className="py-14 px-10 ">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold mb-10">{whyContent.title}</h3>
           <p className="text-primary-dark text-xl mb-10">
@@ -28,7 +28,7 @@ export default async function WhySection({ whyContent }) {
                 <SolutionCheck text={el.listElement} key={el.id} />
               ))}
             </ul>
-            <div className="bg-secondary-light grow p-10 rounded-3xl h-[190px] lg:h-[420px] relative overflow-hidden w-full xl:w-auto">
+            <div className="bg-secondary-light grow p-5 mx-auto lg:p-10 rounded-3xl h-[190px] lg:h-[420px] relative overflow-hidden w-full xl:w-auto">
               <h4 className="text-center text-xl font-bold mb-6">
                 Ecran e-ink
               </h4>

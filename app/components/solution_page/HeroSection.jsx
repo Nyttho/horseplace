@@ -30,10 +30,10 @@ export default async function HeroSection({ heroContent }) {
           {/* Couche sombre par-dessus l'image */}
           <div className="absolute inset-0 bg-gray-800/25 z-10"></div>
           {/* Contenu principal */}
-          <div className="text-white absolute top-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
-            <h2 className="text-5xl text-center font-bold">
+          <div className="text-white w-full absolute top-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
+            <h2 className="text-3xl lg:text-5xl text-center font-bold">
               {titleArray[0]}{" "}
-              <span className="bg-primary-dark px-1">{emphasis}</span>{" "}
+              <span className="lg:bg-primary-dark lg:px-1">{emphasis}</span>{" "}
               {titleArray.slice(2, -1).join(" ")}{" "}
               <span className="underline">{underline}</span>
             </h2>
@@ -46,7 +46,7 @@ export default async function HeroSection({ heroContent }) {
               </div>
             </Link>
           </div>
-          {/* Vidéo par-dessus l'image, en bas et légèrement chevauchant la section suivante */}
+
           <div className="absolute bottom-0 left-0 w-full z-30 ">
             <video
               autoPlay

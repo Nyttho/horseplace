@@ -14,7 +14,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-20 px-6 text-primary-dark font-bold mx-10 lg:mx-0">
+    <footer className="mt-20 lg:px-6 text-primary-dark font-bold mx-10 lg:mx-0">
       {/* Logo centré au-dessus */}
       <div className="w-32 h-12 sm:w-40 sm:h-14 md:w-44 md:h-16 mx-auto">
         <Image src={logo} width={176} height={64} alt="logo" />

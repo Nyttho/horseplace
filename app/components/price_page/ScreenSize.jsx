@@ -19,7 +19,7 @@ export default function ScreenSize({ offer }) {
 
   return (
     <div
-      className={`${dynamicClass} my-5 overflow-hidden border-[3px] border-black flex justify-center items-center rounded-sm`}
+      className={`${dynamicClass} hidden   my-5 overflow-hidden border-[3px] border-black lg:flex justify-center items-center rounded-sm`}
     >
       <Image src={logo} alt={offer.title} width={logoSize} height={logoSize} />
     </div>
