@@ -10,7 +10,7 @@ export default function Footer() {
     { href: "/tarif", label: "Tarifs" },
     { href: "/a-propos", label: "À Propos" },
     { href: "/contact", label: "Contact" },
-    { href: "/devis", label: "Demander un devis" },
+    { href: "/contact", label: "Demander un devis" },
   ];
 
   return (

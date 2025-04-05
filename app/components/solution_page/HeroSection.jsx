@@ -6,7 +6,6 @@ export default async function HeroSection({ heroContent }) {
   const emphasis = titleArray[1];
   const underline = titleArray[titleArray.length - 1];
   const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.formats.large.url}`;
-  console.log(illustration);
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}
 /api/video-animation?populate=*`);
