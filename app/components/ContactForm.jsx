@@ -15,7 +15,7 @@ export default function ContactForm() {
       const formData = { email, phone, message };
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}api/contacts`,
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/contacts`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

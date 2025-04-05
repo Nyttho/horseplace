@@ -2,13 +2,15 @@ import Image from "next/image";
 export default async function TrustSection({ trustContent }) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/clients?populate=*`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/clients?populate=*`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");
     }
     const data = await response.json();
     const clients = data.data;
+
+    console.log(clients);
 
     return (
       <section className="py-10 ">

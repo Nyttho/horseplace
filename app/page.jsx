@@ -7,7 +7,7 @@ import JoinSection from "./components/homepage/JoinSection";
 export default async function Home() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/home?populate[heroSection][populate]&populate[trustSection][populate]&populate[testimonial][populate]=authorImg&populate[contactSection][populate]=image&populate[statistics][populate]`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/home?populate[heroSection][populate]&populate[trustSection][populate]&populate[testimonial][populate]=authorImg&populate[contactSection][populate]=image&populate[statistics][populate]`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");

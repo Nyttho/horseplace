@@ -3,7 +3,7 @@ import Offer from "../Offer";
 export default async function OfferSection() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/offers`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/offers`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");

@@ -5,7 +5,7 @@ import eInk from "@/public/static/images/e-ink_illustration.png";
 export default async function WhySection({ whyContent }) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/why-lists?populate=*`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/why-lists?populate=*`
     );
 
     if (!response.ok) {

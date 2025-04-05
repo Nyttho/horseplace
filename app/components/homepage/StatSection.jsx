@@ -3,7 +3,7 @@ import GridCard from "../GridCard";
 export default async function StatSection() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/statistics`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/statistics`
     );
 
     if (!response.ok) {

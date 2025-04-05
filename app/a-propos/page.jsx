@@ -4,7 +4,7 @@ import QuestionsSection from "../components/about_page/QuestionsSection";
 const APropos = async () => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/about-us?populate=*`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/about-us?populate=*`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");

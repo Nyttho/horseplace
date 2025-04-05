@@ -6,7 +6,7 @@ import Estimation from "@/app/components/Estimation";
 export default async function Solution() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/solution?populate[Header][populate]=headerImg&populate[whatSection][populate]&populate[whySection][populate]=productIllustration`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/solution?populate[Header][populate]=headerImg&populate[whatSection][populate]&populate[whySection][populate]=productIllustration`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");
