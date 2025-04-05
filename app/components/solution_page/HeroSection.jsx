@@ -9,7 +9,7 @@ export default async function HeroSection({ heroContent }) {
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}
-/api/video-animation?populate=*`);
+api/video-animation?populate=*`);
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");
     }

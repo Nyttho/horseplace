@@ -4,7 +4,7 @@ import SolutionIconList from "../SolutionIconList";
 export default async function WhatSection({ whatContent }) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/what-lists?populate=*`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/what-lists?populate=*`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");

@@ -1,7 +1,7 @@
 export default async function QuestionsSection() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/faq-lists?populate=*`
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}api/faq-lists?populate=*`
     );
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des données");
