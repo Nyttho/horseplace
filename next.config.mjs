@@ -5,7 +5,7 @@ const nextConfig = {
       "localhost",
       "127.0.0.1",
       "horsplace-content-manager.onrender.com",
-    ], // Notez la suppression de https://
+    ],
   },
   async redirects() {
     return [
@@ -13,11 +13,13 @@ const nextConfig = {
         source: "/admin",
         destination: "https://horsplace-content-manager.onrender.com",
         permanent: true,
+        basePath: false,
       },
       {
         source: "/admin/:path*",
         destination: "https://horsplace-content-manager.onrender.com/:path*",
         permanent: true,
+        basePath: false,
       },
     ];
   },
