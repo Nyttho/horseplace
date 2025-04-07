@@ -5,16 +5,14 @@ import NumberBox from "@/app/components/NumberBox";
 import { useState, useEffect } from "react";
 
 export default function Estimation() {
-  const [horses, setHorses] = useState(0);
   const [boxes, setBoxes] = useState(0);
-  const [screens, setScreens] = useState(0);
+  const [batiments, setBatiments] = useState(0);
 
   // loading values from localStorage from client side only
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setHorses(parseInt(localStorage.getItem("chevaux") || "0", 10));
       setBoxes(parseInt(localStorage.getItem("boxes") || "0", 10));
-      setScreens(parseInt(localStorage.getItem("écrans") || "0", 10));
+      setBatiments(parseInt(localStorage.getItem("batiments") || "0", 10));
     }
   }, []);
 
@@ -61,16 +59,16 @@ export default function Estimation() {
                 setItemType={setBoxes}
               />
               <NumberBox
-                amount={screens}
+                amount={batiments}
                 itemType="batiments"
                 range={handleRange}
-                setItemType={setScreens}
+                setItemType={setBatiments}
               />
               {/* Carte pour l'estimation */}
               <div className="px-4 py-12 text-center h-64 flex items-center flex-1 flex-col flex-wrap justify-between bg-white">
                 <p className="text-primary-dark text-md">Votre estimation :</p>
                 <div className="text-3xl text-primary-dark border-[1px] border-primary-dark py-2 px-5 rounded-lg my-2 mx- 2 relative">
-                  {(horses * 10 + boxes * 15 + screens * 20)
+                  {(boxes * 15 + batiments * 20)
                     .toString()
                     .padStart(3, "0")}
                   €<span className="text-sm absolute top-3 right-3">*</span>
