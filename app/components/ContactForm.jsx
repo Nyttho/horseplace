@@ -51,7 +51,7 @@ export default function ContactForm() {
   }, [feedBack]);
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto w-3/4 flex flex-col gap-5">
+    <form onSubmit={handleSubmit} className="mx-auto w-full md:w-3/4 flex flex-col gap-5">
       {feedBack && (
         <div
           className={`p-3 text-center rounded-md text-white ${
@@ -63,7 +63,7 @@ export default function ContactForm() {
       )}
 
       <input
-        className="w-2/5 p-5 border-[1px] border-primary-dark rounded-md mx-auto outline-none"
+        className="w-full md:w-2/5 p-5 border-[1px] border-primary-dark rounded-md mx-auto outline-none"
         type="email"
         name="email"
         placeholder="Email"
@@ -73,7 +73,7 @@ export default function ContactForm() {
       />
 
       <input
-        className="w-2/5 p-5 border-[1px] border-primary-dark rounded-md mx-auto outline-none"
+        className="w-full md:w-2/5 p-5 border-[1px] border-primary-dark rounded-md mx-auto outline-none"
         type="text"
         name="phone"
         placeholder="Téléphone"
@@ -94,7 +94,7 @@ export default function ContactForm() {
       ></textarea>
 
       <button
-        className="bg-primary-dark text-white rounded-md text-center w-2/5 py-5 mx-auto mt-5 disabled:opacity-50"
+        className="bg-primary-dark text-white rounded-md text-center w-4/5 md:w-2/5 py-5 mx-auto mt-5 disabled:opacity-50"
         type="submit"
         disabled={isLoading}
       >
