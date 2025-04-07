@@ -16,10 +16,10 @@ export default async function WhySection({ whyContent }) {
     const whyListElement = data.data;
 
     return (
-      <section className="py-14 px-10 ">
+      <section className="py-14 px-5 xl:px-40 ">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold mb-10">{whyContent.title}</h3>
-          <p className="text-primary-dark text-xl mb-10">
+          <h3 className="text-2xl font-bold mb-10 text-center md:text-left">{whyContent.title}</h3>
+          <p className="text-primary-dark text-xl mb-10 text-center md:text-left">
             {whyContent.subtitle}
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -15,7 +15,7 @@ export default async function HeroSection({ heroContent }) {
     const data = await response.json();
     const videoUrl = data.data.videoUrl;
     return (
-      <section className="h-screen relative mb-20">
+      <section className="h-[650px] lg:h-screen relative mb-20">
         <div className="relative w-full h-full">
           {/* Image en fond */}
           <div className="absolute inset-0 z-0">
@@ -46,18 +46,19 @@ export default async function HeroSection({ heroContent }) {
             </Link>
           </div>
 
-          <div className="absolute bottom-0 left-0 w-full z-30 ">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-1/2 h-auto object-cover translate-y-20 mx-auto rounded-md overflow-hidden border-2 border-primary-dark flex" // Le translate-y pour décaler légèrement vers le bas
-            >
-              <source src={videoUrl} type="video/webm" />
-              Votre navigateur ne supporte pas la vidéo.
-            </video>
-          </div>
+          <div className="absolute bottom-0 left-0 w-full z-30 flex justify-center">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] max-w-4xl h-auto object-cover translate-y-20 rounded-md overflow-hidden border-2 border-primary-dark shadow-lg"
+  >
+    <source src={videoUrl} type="video/webm" />
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+</div>
+
         </div>
       </section>
     );
