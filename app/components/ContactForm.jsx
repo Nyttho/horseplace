@@ -5,10 +5,21 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [consent, setConsent] = useState(false); // <- RGPD checkbox
   const [isLoading, setIsLoading] = useState(false);
   const [feedBack, setFeedBack] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!consent) {
+      setFeedBack({
+        message: "Vous devez accepter les conditions pour envoyer le message.",
+        type: "error",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -32,6 +43,7 @@ export default function ContactForm() {
       setEmail("");
       setPhone("");
       setMessage("");
+      setConsent(false); // reset checkbox
     } catch (error) {
       setFeedBack({
         message: "Échec de l'envoi du message.",
@@ -42,7 +54,6 @@ export default function ContactForm() {
     }
   };
 
-  // Disparition du feedback après 5 secondes
   useEffect(() => {
     if (feedBack) {
       const timer = setTimeout(() => setFeedBack(null), 2000);
@@ -92,6 +103,20 @@ export default function ContactForm() {
         value={message}
         required
       ></textarea>
+
+      {/* ✅ RGPD Consent Checkbox */}
+      <div className="flex items-center gap-2 mx-auto w-full md:w-2/5">
+        <input
+          type="checkbox"
+          id="consent"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="w-5 h-5"
+        />
+        <label htmlFor="consent" className="text-sm text-gray-700">
+          J’accepte que mes données soient utilisées pour être recontacté.
+        </label>
+      </div>
 
       <button
         className="bg-primary-dark text-white rounded-md text-center w-4/5 md:w-2/5 py-5 mx-auto mt-5 disabled:opacity-50"
