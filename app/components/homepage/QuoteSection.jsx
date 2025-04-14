@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 export default function QuoteSection({ testimonialContent }) {
+  console.log(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}${testimonialContent.authorImg.formats.thumbnail.url}`
+  );
   return (
     <section className="flex flex-col p-5 lg:p-10 bg-primary-light justify-center items-center text-white">
       <div className="text-center w-2/3">
