@@ -15,7 +15,7 @@ export default async function QuestionsSection() {
     const secondColumnQuestions = questions.slice(4, 8);
 
     return (
-      <section className="text-primary-dark p-10 lg:p-20 mt-1">
+      <section className="text-primary-dark p-10 lg:p-20 mt-1 text-center md:text-left">
         <h3 className="uppercase text-2xl lg:text-5xl font-bold text-black text-center mb-20">
           FAQ
         </h3>

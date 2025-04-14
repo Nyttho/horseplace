@@ -14,12 +14,10 @@ export default function MentionsLegales() {
           <h2 className="text-xl font-semibold mb-2">Éditeur du site</h2>
           <p>
             Le site <strong>Horsplace</strong> est édité par :<br />
-            <strong>Nom de l&apos;entreprise</strong> (ou Nom du particulier si
-            auto-entrepreneur) <br />
-            Adresse : [Votre adresse] <br />
-            Email : contact@horsplace.com <br />
-            Téléphone : [Votre numéro] <br />
-            SIRET : [Votre numéro SIRET] (si applicable)
+            <strong>SPARROW DEVELOPPEMENT</strong> <br />
+            Adresse : 781 RTE DE CAEN, 14130 PONT L'EVEQUE <br />
+            Email : vincent@horsplace.com <br />
+            SIRET : 	920 384 617 00014 
           </p>
         </section>
 

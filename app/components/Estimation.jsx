@@ -5,16 +5,14 @@ import NumberBox from "@/app/components/NumberBox";
 import { useState, useEffect } from "react";
 
 export default function Estimation() {
-  const [horses, setHorses] = useState(0);
   const [boxes, setBoxes] = useState(0);
-  const [screens, setScreens] = useState(0);
+  const [batiments, setBatiments] = useState(0);
 
   // loading values from localStorage from client side only
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setHorses(parseInt(localStorage.getItem("chevaux") || "0", 10));
       setBoxes(parseInt(localStorage.getItem("boxes") || "0", 10));
-      setScreens(parseInt(localStorage.getItem("écrans") || "0", 10));
+      setBatiments(parseInt(localStorage.getItem("batiments") || "0", 10));
     }
   }, []);
 
@@ -26,12 +24,12 @@ export default function Estimation() {
   };
 
   return (
-    <section>
-      <div className="bg-primary-dark text-white px-16 py-12 my-10 w-4/5 mx-auto rounded-3xl">
+    <section className="px-5 xl:px-40">
+      <div className="bg-primary-dark text-white p-5 pt-10 md:px-16 md:py-12 my-10  rounded-3xl">
         <div className=" mx-auto flex flex-col md:flex-row justify-around items-center gap-10">
           {/* Section texte et boutons */}
           <div className="flex-1">
-            <h2 className="text-4xl font-bold">ESTIMEZ VOTRE PRIX</h2>
+            <h2 className="text-4xl font-bold text-center md:text-left">ESTIMEZ VOTRE PRIX</h2>
             <p className="mt-4 text-lg">
               Fini les ardoises obsolètes et les erreurs : optez pour nos écrans
               e-Ink robustes et entièrement personnalisables pour une gestion
@@ -61,16 +59,16 @@ export default function Estimation() {
                 setItemType={setBoxes}
               />
               <NumberBox
-                amount={screens}
+                amount={batiments}
                 itemType="batiments"
                 range={handleRange}
-                setItemType={setScreens}
+                setItemType={setBatiments}
               />
               {/* Carte pour l'estimation */}
-              <div className="px-4 py-12 text-center h-64 flex items-center min-w-40 flex-col flex-wrap justify-between bg-white">
+              <div className="px-4 py-12 text-center h-64 flex items-center flex-1 flex-col flex-wrap justify-between bg-white">
                 <p className="text-primary-dark text-md">Votre estimation :</p>
                 <div className="text-3xl text-primary-dark border-[1px] border-primary-dark py-2 px-5 rounded-lg my-2 mx- 2 relative">
-                  {(horses * 10 + boxes * 15 + screens * 20)
+                  {(boxes * 15 + batiments * 20)
                     .toString()
                     .padStart(3, "0")}
                   €<span className="text-sm absolute top-3 right-3">*</span>

@@ -14,7 +14,7 @@ export default async function OfferSection() {
     return (
       <section className="bg-secondary-light py-10">
         <div className="text-primary-dark text-center mt-10">
-          <h2 className="text-5xl font-bold mb-6">Offres tarifaires</h2>
+          <h2 className="text-5xl font-bold mb-6 text-black">Offres tarifaires</h2>
           <q className="text-lg">
             Choisissez l'abonnement qui correspond à vos besoins. Aucun
             engagement caché.
