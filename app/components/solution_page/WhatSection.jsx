@@ -12,6 +12,7 @@ export default async function WhatSection({ whatContent }) {
     const data = await response.json();
     const elementList = data.data;
 
+    console.log(elementList);
     return (
       <section className="py-20 px-5 xl:px-40 ">
         <div className="flex flex-col xl:flex-row">
@@ -32,7 +33,6 @@ export default async function WhatSection({ whatContent }) {
           <div className="bg-primary-dark p-5 lg:p-10 xl:p-14 rounded-2xl w-fit h-fit mx-auto">
             <ul className="text-white flex flex-col content-between w-full gap-5">
               {elementList.map((el) => {
-                const iconUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}${el.icon.formats.thumbnail.url}`;
                 return (
                   <SolutionIconList
                     label={el.primaryText}
