@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import IllustrationHorse1 from "@/public/static/images/illustration_horse_1.jpeg";
 
 export default async function HeroSection({ heroContent }) {
   const titleArray = heroContent.title.split(" ");
   const emphasis = titleArray[1];
   const underline = titleArray[titleArray.length - 1];
-  const illustration = `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.formats.large.url}`;
+  const illustration = heroContent.headerImg?.formats?.large?.url
+    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.formats.large.url}`
+    : heroContent.headerImg?.url
+    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.url}`
+    : IllustrationHorse1.src;
+
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}
 /api/video-animation?populate=*`);
@@ -47,18 +53,17 @@ export default async function HeroSection({ heroContent }) {
           </div>
 
           <div className="absolute bottom-0 left-0 w-full z-30 flex justify-center">
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] max-w-4xl h-auto object-cover translate-y-20 rounded-md overflow-hidden border-2 border-primary-dark shadow-lg"
-  >
-    <source src={videoUrl} type="video/webm" />
-    Votre navigateur ne supporte pas la vidéo.
-  </video>
-</div>
-
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] max-w-4xl h-auto object-cover translate-y-20 rounded-md overflow-hidden border-2 border-primary-dark shadow-lg"
+            >
+              <source src={videoUrl} type="video/webm" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+          </div>
         </div>
       </section>
     );
