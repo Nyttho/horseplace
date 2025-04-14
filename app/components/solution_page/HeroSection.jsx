@@ -1,17 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import IllustrationHorse1 from "@/public/static/images/illustration_horse_1.jpeg";
+import IllustrationHorse2 from "@/public/static/images/illustration_horse_2.jpg";
 
 export default async function HeroSection({ heroContent }) {
   const titleArray = heroContent.title.split(" ");
   const emphasis = titleArray[1];
   const underline = titleArray[titleArray.length - 1];
-  const illustration = heroContent.headerImg?.formats?.large?.url
-    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.formats.large.url}`
-    : heroContent.headerImg?.url
-    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${heroContent.headerImg.url}`
-    : IllustrationHorse1.src;
-
+  const illustration = IllustrationHorse2.src;
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}
 /api/video-animation?populate=*`);

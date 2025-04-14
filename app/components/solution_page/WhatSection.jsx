@@ -16,7 +16,9 @@ export default async function WhatSection({ whatContent }) {
       <section className="py-20 px-5 xl:px-40 ">
         <div className="flex flex-col xl:flex-row">
           <div className="mx-auto flex-1 flex flex-col justify-between items-center xl:items-start mb-14 xl:mb-0  xl-mb-0  xl:w-1/2  xl:justify-center">
-            <h3 className="font-bold text-3xl mb-5 text-center md:text-left">{whatContent.title}</h3>
+            <h3 className="font-bold text-3xl mb-5 text-center md:text-left">
+              {whatContent.title}
+            </h3>
             <p className="w-3/4 text-primary-dark text-lg leading-8 text-center xl:text-left">
               {whatContent.text}
             </p>
@@ -33,7 +35,6 @@ export default async function WhatSection({ whatContent }) {
                 const iconUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}${el.icon.formats.thumbnail.url}`;
                 return (
                   <SolutionIconList
-                    icon={iconUrl}
                     label={el.primaryText}
                     text={el.secondaryText}
                     key={el.id}

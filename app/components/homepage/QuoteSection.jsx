@@ -2,11 +2,7 @@ import Image from "next/image";
 import avatar from "@/public/static/images/avatar.jpeg";
 
 export default function QuoteSection({ testimonialContent }) {
-  const authorImageUrl = testimonialContent.authorImg?.formats?.thumbnail?.url
-    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${testimonialContent.authorImg.formats.thumbnail.url}`
-    : testimonialContent.authorImg?.url
-    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${testimonialContent.authorImg.url}`
-    : avatar.src;
+  const authorImageUrl = avatar.src;
 
   if (testimonialContent.authorImg?.formats?.thumbnail?.url) {
     console.log(

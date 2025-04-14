@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PoleHippique from "@/public/static/images/clients_logo/pole_hippique.png";
 export default async function TrustSection({ trustContent }) {
   try {
     const response = await fetch(
@@ -27,7 +28,7 @@ export default async function TrustSection({ trustContent }) {
                 key={client.id}
               >
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${client.logo.formats.thumbnail.url}`}
+                  src={PoleHippique}
                   width={500}
                   height={500}
                   alt={client.name}

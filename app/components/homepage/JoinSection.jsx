@@ -1,10 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import illustrationHorse2 from "@/public/static/images/illustration_horse_2.jpg";
+import illustrationHorse1 from "@/public/static/images/illustration_horse_1.jpeg";
 export default function JoinSection({ joinContent }) {
-  const illustration = joinContent.horseImage?.formats?.large?.url
-    ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${joinContent.horseImage.formats.large.url}`
-    : joinContent.horseImage?.url;
+  const illustration = illustrationHorse1.src;
 
   return (
     <section>
