@@ -1,5 +1,5 @@
 import Image from "next/image";
-import avatar from "@/public/static/images/avatar.png";
+import avatar from "@/public/static/images/avatar.jpeg";
 
 export default function QuoteSection({ testimonialContent }) {
   const authorImageUrl = testimonialContent.authorImg?.formats?.thumbnail?.url
