@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HorsPlace – Documentation Technique
 
-## Getting Started
+Ce document décrit la procédure d'installation et de déploiement de l'application **HorsPlace**, qui repose sur les technologies **Next.js**, **Strapi**, et **PostgreSQL**.
 
-First, run the development server:
+## 🧾 Sommaire
+
+- [HorsPlace – Documentation Technique](#horsplace--documentation-technique)
+  - [🧾 Sommaire](#-sommaire)
+  - [📦 Pré-requis](#-pré-requis)
+  - [🛠️ Installation locale](#️-installation-locale)
+    - [1. Cloner le dépôt](#1-cloner-le-dépôt)
+    - [2. Installer les dépendances](#2-installer-les-dépendances)
+    - [3. Faites la même manipulation avec le repos du backend strapi](#3-faites-la-même-manipulation-avec-le-repos-du-backend-strapi)
+  - [🔐 Configuration des variables d’environnement](#-configuration-des-variables-denvironnement)
+  - [▶️ Démarrage de l’application](#️-démarrage-de-lapplication)
+    - [1. Lancer la base de données PostgreSQL](#1-lancer-la-base-de-données-postgresql)
+    - [2. Démarrer Strapi (backend)](#2-démarrer-strapi-backend)
+    - [3. Démarrer Next.js (frontend)](#3-démarrer-nextjs-frontend)
+  - [🚀 Déploiement](#-déploiement)
+
+---
+
+## 📦 Pré-requis
+
+Avant de commencer, assurez-vous d’avoir installé sur votre machine :
+
+- Node.js >= 18
+- npm ou yarn
+- PostgreSQL >= 14
+- Git
+
+---
+
+
+---
+
+## 🛠️ Installation locale
+
+### 1. Cloner le dépôt
+
+```bash
+git clone <URL_DU_DEPOT>
+cd horsplace
+```
+
+### 2. Installer les dépendances
+
+```bash
+npm install
+
+```
+
+### 3. Faites la même manipulation avec le repos du backend strapi
+
+```bash
+git clone <URL_DU_DEPOT>
+cd horsplace
+npm install
+```
+
+## 🔐 Configuration des variables d’environnement
+
+Dans le repos frontend, créez un fichier .env.local
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:1337/api
+
+```
+
+dans le repos strapi, créer un fichier .env
+
+```bash
+DATABASE_CLIENT=postgres
+DATABASE_NAME=horsplace_db
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=motdepasse
+APP_KEYS=clé_app_1,clé_app_2
+API_TOKEN_SALT=clé_api
+ADMIN_JWT_SECRET=secret_jwt_admin
+JWT_SECRET=secret_jwt
+
+
+```
+💡 Remplacez les valeurs ci-dessus par vos propres clés.
+
+## ▶️ Démarrage de l’application
+
+### 1. Lancer la base de données PostgreSQL
+Assurez-vous que PostgreSQL est bien lancé et que la base horsplace_db est créée.
+
+### 2. Démarrer Strapi (backend)
+
+```bash
+npm run develop
+
+```
+Par défaut, le backend est accessible à http://localhost:1337
+
+### 3. Démarrer Next.js (frontend)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Déploiement
+Le déploiement dépend de votre infrastructure. Voici deux approches recommandées :
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Déployer Strapi sur un serveur 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Déployer la base PostgreSQL 
 
-## Learn More
+Déployer Next.js sur Vercel ou un autre hébergeur
 
-To learn more about Next.js, take a look at the following resources:
+Mettre à jour les variables d’environnement pour pointer vers le bon domaine/API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ajouter une couche HTTPS (via un proxy Nginx ou directement dans l’hébergeur)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📝 Notes importantes
+Le premier utilisateur créé dans Strapi aura le rôle d’administrateur.
 
-## Deploy on Vercel
+N'oubliez pas de configurer les permissions publiques/privées dans Strapi.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pensez à sécuriser les accès en production (tokens, CORS, etc.).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pour importer des données ou du contenu, vous pouvez utiliser l’interface d’administration Strapi.
+
