@@ -39,7 +39,8 @@ Avant de commencer, assurez-vous d’avoir installé sur votre machine :
 ### 1. Cloner le dépôt
 
 ```bash
-git clone <URL_DU_DEPOT>
+git clone https://github.com/Nyttho/horseplace.git
+(ou en ssh git@github.com:Nyttho/horseplace.git)
 cd horsplace
 ```
 
@@ -53,8 +54,9 @@ npm install
 ### 3. Faites la même manipulation avec le repos du backend strapi
 
 ```bash
-git clone <URL_DU_DEPOT>
-cd horsplace
+git clone https://github.com/Nyttho/horsplace_content_manager.git
+(ou en ssh git@github.com:Nyttho/horsplace_content_manager.git)
+cd horsplace_content_manager
 npm install
 ```
 
